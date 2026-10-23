@@ -298,7 +298,7 @@ export default function App() {
     event.preventDefault();
     setLoginError("");
     try {
-      const response = await fetch(`${API}/login`, {
+      const response = await fetch(`${API}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
