@@ -143,12 +143,16 @@ app.post("/api/data", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log("==============================================");
-  console.log(" Barangay Information Management System");
-  console.log(" Barangay San Francisco, Baggao, Cagayan");
-  console.log(` Backend running at http://localhost:${PORT}`);
-  console.log(" Captain login: captain@gmail.com");
-  console.log(" Sample records loaded");
-  console.log("==============================================");
-});
+if (require.main === module) {
+  app.listen(process.env.PORT || PORT, () => {
+    console.log("==============================================");
+    console.log(" Barangay Information Management System");
+    console.log(" Barangay San Francisco, Baggao, Cagayan");
+    console.log(` Backend running at http://localhost:${process.env.PORT || PORT}`);
+    console.log(" Captain login: captain@gmail.com");
+    console.log(" Sample records loaded");
+    console.log("==============================================");
+  });
+}
+
+module.exports = app;
