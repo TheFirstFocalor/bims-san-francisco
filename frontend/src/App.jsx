@@ -2,7 +2,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import "./App.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://bims-san-francisco-backend.vercel.app";
 
 // ===== EDIT BARANGAY ACRONYM HERE =====
 const BARANGAY_ACRONYM = "SF";
